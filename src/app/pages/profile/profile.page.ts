@@ -12,7 +12,7 @@ import { Chart } from "chart.js";
 })
 export class ProfilePage implements OnInit {
 
-  @ViewChild('lineCanvas') lineCanvas: ElementRef;
+  @ViewChild('lineCanvas', {static: false}) lineCanvas: ElementRef;
 
 
   items: Array<any>;
