@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/reg']">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <form [formGroup]="new_item_form" (submit)="login(new_item_form.value)">
+      <ion-item>
+        <ion-label color="primary" position="floating">Name</ion-label>
+        <ion-input type="text" formControlName="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="floating">pwd</ion-label>
+        <ion-input type="text" formControlName="pwd" required></ion-input>
+      </ion-item>
+
+      <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!new_item_form.valid">Login</ion-button>
+    </form>
+  </ion-list>
+</ion-content>
