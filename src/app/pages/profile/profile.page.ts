@@ -73,10 +73,10 @@ this.coins=(this.m*60+this.timer)/10;
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: "line",
       data: {
-        labels: ["low", "Sc", "Heigh", "out of control"],
+        labels: ["low", "St", "High", "Out of control"],
         datasets: [
           {
-            label: "Measure",
+            label: "CBT",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
