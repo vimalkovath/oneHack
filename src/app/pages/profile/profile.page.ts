@@ -73,10 +73,10 @@ this.coins=(this.m*60+this.timer)/10;
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: "line",
       data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["low", "Sc", "Heigh", "out of control"],
         datasets: [
           {
-            label: "My First dataset",
+            label: "Measure",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
@@ -94,7 +94,7 @@ this.coins=(this.m*60+this.timer)/10;
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40],
+            data: [65, 59, 80, 81],
             spanGaps: false
           }
         ]
