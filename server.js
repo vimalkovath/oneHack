@@ -14,7 +14,7 @@ var allowCrossDomain = function (req, res, next) {
   next();
 }
 
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/www'));
 app.use(allowCrossDomain);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -32,5 +32,5 @@ console.log('server is running on port ',port);
 app.get('*', function (req, res) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  res.sendFile(path.join(__dirname + '/build/index.html'));
+  res.sendFile(path.join(__dirname + '/www/index.html'));
 });
